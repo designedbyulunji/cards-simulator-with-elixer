@@ -10,4 +10,8 @@ defmodule CardsSimulator do
 
   end
 
+  # Module to shuffle deck
+  def shuffle_deck(deck) do
+    Enum.shuffle(deck)
+  end
 end
