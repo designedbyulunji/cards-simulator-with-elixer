@@ -21,7 +21,7 @@ defmodule CardsSimulator do
   end
 
   # Method to create a hand
-  def create_hand(deck, hand_size) do
+  def deal(deck, hand_size) do
     Enum.split(deck, hand_size)
   end
 
@@ -38,5 +38,12 @@ defmodule CardsSimulator do
       {:error, _reason} -> "File does not exist"
 
     end
+  end
+
+  # Method to create_hand
+  def create_hand(hand_size) do
+    CardsSimulator.create_deck()
+    |> CardsSimulator.shuffle_deck()
+    |> CardsSimulator.deal(hand_size)
   end
 end
