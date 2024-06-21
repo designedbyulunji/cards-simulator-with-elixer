@@ -10,8 +10,13 @@ defmodule CardsSimulator do
 
   end
 
-  # Module to shuffle deck
+  # Method to shuffle deck
   def shuffle_deck(deck) do
     Enum.shuffle(deck)
+  end
+
+  # Method to check whether the deck contains a specific card
+  def contains?(deck, card) do
+    Enum.member?(deck, card)
   end
 end
